@@ -21,18 +21,13 @@ public class Grupo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nomeGrupo;
-    private String descricaoGrupo;
-
-
-    @JsonFormat(pattern = "dd/MM/yyyy")
-    @Column(name = "data_nascimento", nullable = false)
-    private LocalDate data_nascimento;
+    private String nome;
+    private String descricao;
 
 
     @CreationTimestamp
     @Column(name = "data_cadastroGrupo", nullable = false, updatable = false)
-    private LocalDateTime data_cadastroGrupo;
+    private LocalDateTime data_cadastro;
 
 
     @ManyToOne

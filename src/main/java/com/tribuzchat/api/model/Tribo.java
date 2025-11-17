@@ -19,13 +19,13 @@ public class Tribo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nomeTribo;
-    private String descricaoTribo;
+    private String nome;
+    private String descricao;
 
 
     @CreationTimestamp
     @Column(name = "data_cadastroTribo", nullable = false, updatable = false)
-    private LocalDateTime data_cadastroTribo;
+    private LocalDateTime data_cadastro;
 
 
     @OneToMany(mappedBy = "tribo", cascade = CascadeType.ALL)
